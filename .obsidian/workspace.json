@@ -4,66 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "024fb004bd085f4e",
+        "id": "12198f636c125dd6",
         "type": "tabs",
         "children": [
           {
-            "id": "f7001146d05e56b5",
+            "id": "f8e28a4f9c96c489",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/resource-template.md",
+                "file": "templates/ai-draft-template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "resource-template"
-            }
-          },
-          {
-            "id": "f03d03c8e543a52e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README.md"
-            }
-          },
-          {
-            "id": "8d9c93a69d9b34eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/resource-template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "resource-template"
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "e1bf6e3adec83b12",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c51dc18edce5c57c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "ai-draft-template"
             }
           }
         ]
@@ -211,14 +166,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d9c93a69d9b34eb",
+  "active": "f8e28a4f9c96c489",
   "lastOpenFiles": [
-    "templates/workflow-template.md.md",
-    "templates/resource-template.md",
+    "templates/README.md",
+    "README.md.tmp.96856.1761866919931",
     "create a link.md",
+    "README.md.tmp.96856.1761866780728",
+    "workflows/current.md",
+    "templates/note-template.md",
+    "templates/ai-draft-template.md",
+    "templates/resource-list.md",
+    "templates/tool-template.md",
+    "README.md",
+    "templates/resource-template.md",
+    "resources/prompts",
+    "templates/workflow-template.md",
+    "templates/resource-template.md.md",
+    "templates/workflow-template.md.md",
+    "Untitled.md",
     "README.md.md",
     "notes",
     "resources",
