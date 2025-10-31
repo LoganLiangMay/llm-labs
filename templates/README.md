@@ -15,6 +15,9 @@
 ## Note
 → [[templates/note-template]]
 
+## Stack Validation (Multi-AI)
+→ [[templates/stack-validation-prompt]] - Validate tech stack decisions across ChatGPT, Claude, Grok, Perplexity before generating PRD
+
 ## PRD Prompts (AI Agents)
 
 ### For Cursor
