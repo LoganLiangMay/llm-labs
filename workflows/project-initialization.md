@@ -2,10 +2,10 @@
 _Last updated: 2025-10-30_
 
 ## Goal
-Standardized process for taking a rough project idea and turning it into a clear, implementable Product Requirements Document (PRD) with chosen tech stack.
+Standardized process for taking a rough project idea and turning it into a clear, well-validated Product Requirements Document (PRD) with a confident tech stack decision.
 
 ## Overview
-This workflow bridges the gap between "I want to build X" and "Here's exactly how to build X with Y stack." It uses a **6-step process** including multi-AI validation to ensure tech stack decisions are sound before generating a comprehensive PRD optimized for BMAD (Break down, Make, Approve, Deploy) implementation.
+This workflow bridges the gap between "I want to build X" and "Here's exactly how to build X with Y stack." It uses a **6-step process** including multi-AI validation to ensure tech stack decisions are sound before generating a comprehensive PRD and starting development.
 
 **Key Innovation**: Step 3 validates your tech stack and project plan across multiple free AI tools (ChatGPT, Claude, Grok, Perplexity) to catch mistakes early and build confidence in your decisions.
 
@@ -133,25 +133,28 @@ Questions:
 
 ---
 
-### Step 6: Implementation (BMAD Method)
+### Step 6: Implementation
 **Process**:
-1. **Break down**: Agent breaks PRD into tasks
-2. **Make**: Implement features incrementally
-3. **Approve**: Review and test each component
-4. **Deploy**: Ship to production/staging
+1. Start building based on your approved PRD
+2. Use your chosen AI coding tool (Cursor, Claude Code, etc.)
+3. Implement features incrementally
+4. Test as you go
+5. Deploy when MVP is complete
 
 **Output**: Working MVP
 
 ---
 
-## Current Setup
+## Current Setup (Planning Focus)
+This workflow focuses on **Steps 1-5** (planning and validation). Implementation methodology is covered separately.
+
 1. **Stack Validation Phase** (Step 3): Multi-AI consultation using free tools
    - [[templates/stack-validation-prompt|Stack Validation Prompt]] - for ChatGPT, Claude, Grok, etc.
 2. **PRD Generation** (Step 4): Two prompt templates available
    - [[templates/prd-prompt-template|Cursor-optimized]] - for Cursor IDE
    - [[templates/prd-prompt-template-claude|Claude-optimized]] - for Claude Code / Claude.ai
-3. Firebase + React Native/Expo as default stack for rapid prototyping
-4. Hybrid AI approach (dedicated assistant + contextual features)
+3. Default recommendations: Firebase + React Native/Expo for rapid prototyping
+4. Hybrid AI approach for AI features (dedicated assistant + contextual features)
 
 ## Tools Used
 
@@ -163,12 +166,16 @@ Questions:
 - Gemini - Google's tech recommendations
 - [[templates/stack-validation-prompt]] - Stack validation prompt template
 
-### For PRD Generation & Implementation (Steps 4-6)
-- [[tools/cursor]] - AI code editor for PRD generation and implementation
-- [[tools/claude-code]] - AI agent for planning and development
-- [[tools/firebase]] - Backend infrastructure
+### For PRD Generation (Step 4)
+- [[tools/cursor]] - AI code editor for PRD generation
+- [[tools/claude-code]] - AI agent for planning
 - [[templates/prd-prompt-template]] - Cursor-optimized PRD prompt template
 - [[templates/prd-prompt-template-claude]] - Claude-optimized PRD prompt template
+
+### For Implementation (Step 6)
+- [[tools/cursor]] - AI code editor
+- [[tools/claude-code]] - AI coding assistant
+- [[tools/firebase]] - Backend infrastructure (common choice)
 
 ## Examples
 - [[ai-drafts/chatiq-prd-example]] - WhatsApp clone with AI features for remote teams
@@ -209,11 +216,11 @@ Questions:
 - [[workflows/current]] - Current active workflow
 
 ## Notes
-> This workflow is designed to work with AI coding agents that support BMAD methodology. The PRD should be detailed enough that the agent can implement autonomously with minimal clarification.
+> This workflow focuses on thorough planning before development. The PRD should be detailed enough that implementation is straightforward and clear.
 
 > **Key insight**: The quality of the PRD directly impacts implementation speed. Spending 30-60 minutes on a solid PRD saves hours in development.
 
-> **New insight (Step 3)**: Consulting multiple free AI tools (ChatGPT, Claude, Grok, Perplexity) before generating the PRD catches 80% of tech stack mistakes early. Each AI has different strengths - Claude for architecture, ChatGPT for general advice, Grok for alternatives, Perplexity for research-backed validation. Spending 15-20 minutes on this step prevents days of rework.
+> **Critical step - Multi-AI validation (Step 3)**: Consulting multiple free AI tools (ChatGPT, Claude, Grok, Perplexity) before generating the PRD catches 80% of tech stack mistakes early. Each AI has different strengths - Claude for architecture, ChatGPT for general advice, Grok for alternatives, Perplexity for research-backed validation. Spending 15-20 minutes on this step prevents days of rework.
 
 ---
 
