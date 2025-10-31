@@ -2,180 +2,166 @@
 _Last updated: 2025-10-30_
 
 ## Goal
-Standardized process for taking a rough project idea and turning it into a clear, well-validated Product Requirements Document (PRD) with a confident tech stack decision.
+Get from rough project idea to ready-to-code with a validated tech stack. The IDE (Cursor/Claude Code) will then generate the PRD and handle implementation.
 
 ## Overview
-This workflow bridges the gap between "I want to build X" and "Here's exactly how to build X with Y stack." It uses a **6-step process** including multi-AI validation to ensure tech stack decisions are sound before generating a comprehensive PRD and starting development.
+This workflow prepares everything needed before opening your IDE. It's a **3-step process**:
+1. Start with a project idea
+2. Flesh out and validate your tech stack
+3. Hand off to your coding IDE to develop the PRD
 
-**Key Innovation**: Step 3 validates your tech stack and project plan across multiple free AI tools (ChatGPT, Claude, Grok, Perplexity) to catch mistakes early and build confidence in your decisions.
+**Key Innovation**: Multi-AI validation (Step 2) catches tech stack mistakes early using free tools (ChatGPT, Claude, Grok, Perplexity) before you write any code.
+
+**What Happens Next**: Your IDE (Cursor/Claude Code) generates the PRD, saves it to memory/project files, and starts implementation.
+
+---
 
 ## Process Flow
 
-### Step 1: Receive Initial Idea
-**Input**: Rough concept or project brief
-- Example: "Build an AI desktop video editor"
-- Example: "Create a WhatsApp clone with AI features"
-- Can be high-level, lacking technical details
+### Step 1: Start with Project Idea
+**What you have**: Rough concept or project brief
 
-**Output**: Clear problem statement and user needs
+**Examples**:
+- "Build an AI desktop video editor"
+- "Create a WhatsApp clone with AI features"
+- "Make a messaging app for remote teams"
+
+**What to gather**:
+- Project specifications, rubrics, constraints
+- Target user personas
+- MVP scope vs. future features
+- Platform/technology constraints (if any)
+- Timeline and deadlines
+
+**Output**: Clear project context with rough scope
+
+**Time**: 15-30 minutes
 
 ---
 
-### Step 2: Gather Requirements & Context
-**Actions**:
-1. Collect any project specifications, rubrics, or constraints
-2. Identify target user personas
-3. Define MVP scope vs. future features
-4. Note any platform/technology constraints
-5. Research potential tech stack options
+### Step 2: Flesh Out & Validate Tech Stack (Multi-AI Consultation)
+**What you do**: Research tech stack options and validate them with multiple AIs
 
-**Output**: Complete project context document with 2-3 potential tech stacks
+**How**:
+1. Research 2-3 potential tech stacks for your project
+2. Use the [[templates/stack-validation-prompt|Stack Validation Prompt Template]]
+3. Submit to 2-3 free AI tools:
+   - **ChatGPT** (free tier) - General tech advice
+   - **Claude.ai** (free tier) - Detailed architecture discussion
+   - **Grok** (X.com) - Alternative perspectives
+   - **Perplexity** - Research-backed validation
+4. Compare their recommendations
+5. Document consensus and concerns
 
----
-
-### Step 3: Stack Validation & Planning Discussion (Multi-AI Consultation)
-**Purpose**: Validate tech stack decisions and discuss project approach with multiple AI models before committing to full PRD
-
-**Free AI Tools to Use**:
-- ChatGPT (free tier) - General tech stack advice
-- Claude.ai (free tier) - Detailed architectural discussion
-- Grok (X.com) - Alternative perspectives
-- Perplexity - Research-backed recommendations
-- Gemini - Google's perspective on tech choices
-
-**Process**:
-1. Use the [[templates/stack-validation-prompt|Stack Validation Prompt Template]]
-2. Submit to 2-3 different AI models (use free tiers)
-3. Compare responses and identify:
-   - Common recommendations across AIs
-   - Performance concerns raised
-   - Pros/cons of each stack option
-   - MVP scope feasibility
-   - Potential pitfalls or gotchas
-
-**What to Discuss**:
-- **Tech Stack Options**: Present 2-3 potential stacks, ask for comparison
-- **Performance Considerations**: Database choice, real-time sync, scaling
-- **MVP Feasibility**: Can this be built in your timeline?
-- **Risk Assessment**: What could go wrong with each approach?
-- **Alternative Approaches**: What did you miss? Better options?
-- **Cost Implications**: Free tiers, API costs, hosting
+**Questions they'll help you answer**:
+- Which stack fits my timeline and requirements?
+- What are the performance implications?
+- What risks am I missing?
+- Are there better alternatives?
+- Is my MVP scope realistic?
 
 **Output**:
-- Validated tech stack decision (with confidence)
-- List of confirmed risks and mitigation strategies
-- Refined MVP scope based on AI feedback
-- Notes on what each AI recommended
+- Validated, confident tech stack decision
+- List of known risks and how to handle them
+- Refined MVP scope
+- Documentation of what each AI recommended
 
-**Example Questions to Ask**:
-```markdown
-I'm building [PROJECT_NAME] - a [brief description].
+**Time**: 15-20 minutes
 
-Timeline: [MVP deadline]
-Key features: [list 3-5 core features]
-
-I'm considering these tech stacks:
-1. [Stack A]: [components]
-2. [Stack B]: [components]
-
-Questions:
-- Which stack is better for my timeline and requirements?
-- What are the performance implications of each?
-- What risks am I not seeing?
-- Are there better alternatives I should consider?
-- What's the realistic MVP scope with each stack?
-```
-
-**Why This Step Matters**:
-- Catches tech stack mistakes early (before coding starts)
-- Multiple AI perspectives reduce blind spots
-- Free tools = no cost for validation
-- Increases confidence in your decisions
-- Often reveals simpler approaches you hadn't considered
+**Why this matters**: Catches 80% of tech stack mistakes before you write any code. Multiple AI perspectives reveal issues you'd miss alone.
 
 ---
 
-### Step 4: Generate PRD via AI Agent
-**Tool**: [[tools/cursor]] or [[tools/claude-code]]
+### Step 3: Hand Off to IDE - Let it Develop the PRD
+**What happens**: Open your coding IDE and let IT generate the detailed PRD
 
-**Choose Your Template**:
-- **For Cursor**: Use [[templates/prd-prompt-template|PRD Prompt Template (Cursor)]] - concise, directive
-- **For Claude**: Use [[templates/prd-prompt-template-claude|PRD Prompt Template (Claude)]] - conversational, comprehensive
+**Tools**: [[tools/cursor]] (recommended) or [[tools/claude-code]]
 
 **Process**:
-1. Choose the appropriate template for your AI agent
-2. Fill in project-specific details:
-   - Project name
-   - Full specification
-   - Chosen platform/stack
+1. **Open your IDE** (Cursor or Claude Code)
+2. **Create new project** or open existing folder
+3. **Use PRD prompt template**:
+   - **For Cursor**: [[templates/prd-prompt-template|PRD Prompt Template (Cursor)]]
+   - **For Claude**: [[templates/prd-prompt-template-claude|PRD Prompt Template (Claude)]]
+4. **Fill in your validated details**:
+   - Project name and specs
+   - Validated tech stack from Step 2
    - User persona
-   - Core features
-3. Submit to AI agent (Cursor, Claude Code, etc.)
-4. Agent generates structured PRD
+   - MVP features
+   - Risks identified
+5. **Submit to IDE** - Let it generate the complete PRD
+6. **Save PRD in TWO places**:
+   - **IDE Memory**: Cursor's memory bank or Claude's context
+   - **Project Files**: `/docs/PRD.md` in your project
+7. **Review and refine** with the IDE if needed
 
-**Output**: Complete PRD with:
-- User stories
-- MVP feature list
-- Tech stack with justifications
-- Out-of-scope items
-- Risk analysis
+**Output**:
+- Complete, detailed PRD saved in IDE memory
+- PRD document in project files (`/docs/PRD.md`)
+- Ready to start coding
 
----
+**Time**: 10-15 minutes
 
-### Step 5: Review & Refine PRD
-**Actions**:
-1. Review generated PRD for accuracy
-2. Cross-check with Step 3 AI feedback
-3. Adjust scope if needed
-4. Get stakeholder approval if applicable
-
-**Output**: Approved, final PRD
-
----
-
-### Step 6: Implementation
-**Process**:
-1. Start building based on your approved PRD
-2. Use your chosen AI coding tool (Cursor, Claude Code, etc.)
-3. Implement features incrementally
-4. Test as you go
-5. Deploy when MVP is complete
-
-**Output**: Working MVP
+**Why this approach**:
+- IDE generates PRD while having full project context
+- Saves to memory for ongoing reference during development
+- IDE can reference PRD throughout implementation
+- PRD stays accessible in project for team collaboration
 
 ---
 
-## Current Setup (Planning Focus)
-This workflow focuses on **Steps 1-5** (planning and validation). Implementation methodology is covered separately.
+## After These 3 Steps
 
-1. **Stack Validation Phase** (Step 3): Multi-AI consultation using free tools
-   - [[templates/stack-validation-prompt|Stack Validation Prompt]] - for ChatGPT, Claude, Grok, etc.
-2. **PRD Generation** (Step 4): Two prompt templates available
-   - [[templates/prd-prompt-template|Cursor-optimized]] - for Cursor IDE
-   - [[templates/prd-prompt-template-claude|Claude-optimized]] - for Claude Code / Claude.ai
-3. Default recommendations: Firebase + React Native/Expo for rapid prototyping
-4. Hybrid AI approach for AI features (dedicated assistant + contextual features)
+You're ready to code! Your IDE has:
+- ✅ Complete PRD in memory
+- ✅ Validated tech stack
+- ✅ Known risks and mitigations
+- ✅ Clear MVP scope
+
+**Next**: Start building. Your IDE will reference the PRD as you work.
+
+---
+
+## Current Setup
+
+This is a **3-step prep workflow** before opening your IDE:
+
+1. **Project Idea** (Step 1): Gather context and scope
+2. **Tech Stack Validation** (Step 2): Multi-AI consultation
+   - [[templates/stack-validation-prompt|Stack Validation Prompt]] - for ChatGPT, Claude, Grok, Perplexity
+3. **IDE Handoff** (Step 3): Let IDE generate PRD
+   - [[templates/prd-prompt-template|Cursor PRD Template]] - for Cursor IDE
+   - [[templates/prd-prompt-template-claude|Claude PRD Template]] - for Claude Code
+
+**Key Point**: PRD is generated BY your IDE (Cursor/Claude Code) and saved in:
+- IDE memory (Cursor memory bank, Claude context)
+- Project files (`/docs/PRD.md`)
+
+This keeps the PRD accessible throughout development.
 
 ## Tools Used
 
-### For Stack Validation (Step 3)
-- ChatGPT (free tier) - General tech advice
-- Claude.ai (free tier) - Architectural discussion
-- Grok (X.com) - Alternative perspectives
-- Perplexity - Research-backed validation
-- Gemini - Google's tech recommendations
+### Step 1: Project Idea
+- Your notes, project briefs, specifications
+- User research, personas
+- Timeline and constraint documentation
+
+### Step 2: Tech Stack Validation
+- **ChatGPT** (free tier) - General tech advice
+- **Claude.ai** (free tier) - Architectural discussion
+- **Grok** (X.com) - Alternative perspectives
+- **Perplexity** - Research-backed validation
 - [[templates/stack-validation-prompt]] - Stack validation prompt template
 
-### For PRD Generation (Step 4)
-- [[tools/cursor]] - AI code editor for PRD generation
-- [[tools/claude-code]] - AI agent for planning
-- [[templates/prd-prompt-template]] - Cursor-optimized PRD prompt template
-- [[templates/prd-prompt-template-claude]] - Claude-optimized PRD prompt template
+### Step 3: IDE Handoff & PRD Generation
+- **[[tools/cursor]]** - Recommended IDE with memory bank
+- **[[tools/claude-code]]** - Alternative IDE with context storage
+- [[templates/prd-prompt-template]] - Cursor-optimized PRD prompt
+- [[templates/prd-prompt-template-claude]] - Claude-optimized PRD prompt
 
-### For Implementation (Step 6)
-- [[tools/cursor]] - AI code editor
-- [[tools/claude-code]] - AI coding assistant
-- [[tools/firebase]] - Backend infrastructure (common choice)
+**PRD Storage**:
+- IDE memory (Cursor memory bank or Claude context)
+- Project files: `/docs/PRD.md`
 
 ## Examples
 - [[ai-drafts/chatiq-prd-example]] - WhatsApp clone with AI features for remote teams
@@ -216,13 +202,17 @@ This workflow focuses on **Steps 1-5** (planning and validation). Implementation
 - [[workflows/current]] - Current active workflow
 
 ## Notes
-> This workflow focuses on thorough planning before development. The PRD should be detailed enough that implementation is straightforward and clear.
 
-> **Key insight**: The quality of the PRD directly impacts implementation speed. Spending 30-60 minutes on a solid PRD saves hours in development.
+> **Simple 3-step approach**: This workflow gets you from idea to ready-to-code in 40-60 minutes total. Steps 1-2 are prep work, Step 3 is letting your IDE do the heavy lifting.
 
-> **Critical step - Multi-AI validation (Step 3)**: Consulting multiple free AI tools (ChatGPT, Claude, Grok, Perplexity) before generating the PRD catches 80% of tech stack mistakes early. Each AI has different strengths - Claude for architecture, ChatGPT for general advice, Grok for alternatives, Perplexity for research-backed validation. Spending 15-20 minutes on this step prevents days of rework.
+> **IDE-generated PRD**: The PRD is created BY your coding IDE (Cursor/Claude Code), not by you manually. The IDE has full project context and saves it to memory for ongoing reference.
+
+> **Key insight**: Multi-AI validation (Step 2) catches 80% of tech stack mistakes BEFORE you open your IDE. Spending 15-20 minutes here prevents days of rework.
+
+> **Memory is critical**: Saving the PRD in your IDE's memory (Cursor memory bank, Claude context) means it's always available during development. No need to re-explain the project constantly.
 
 ---
 
-**Tags**: #workflow #project-planning #prd #ai-agents #cursor #claude
-**Status**: Active - In use for ChatIQ project
+**Tags**: #workflow #project-planning #tech-stack-validation #ide-memory #3-step-process
+**Status**: Active - Simplified 3-step approach
+**Total Time**: 40-60 minutes (idea → ready to code)
