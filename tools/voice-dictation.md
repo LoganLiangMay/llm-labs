@@ -10,18 +10,28 @@ Voice-to-text dictation software that converts speech to text in real-time, usef
 
 ## Options Being Evaluated
 
-### Option 1: Wispr (Current - Paid)
+## Paid/Commercial Options (with Free Trials)
+
+### Wispr (Current)
 **Website**: [https://wispr.ai](https://wispr.ai)
-**Type**: Paid service
+**Cost**: $8/month or $60/year
+**Free Trial**: 7 days
 **Platform**: macOS
+
+**Features**:
+- Global hotkey activation
+- Works in all apps
+- High accuracy (OpenAI Whisper-based)
+- Clean, minimal UI
 
 **Pros**:
 - Polished user experience
 - Works well out of the box
 - Regular updates and support
+- No setup required
 
 **Cons**:
-- Paid subscription ($X/month)
+- Paid subscription
 - Closed source
 - Data sent to their servers
 
@@ -30,7 +40,138 @@ Voice-to-text dictation software that converts speech to text in real-time, usef
 
 ---
 
-### Option 2: Open-Source with Own API Keys (Evaluating)
+### Wispr Flow
+**Website**: [https://wispr.ai/flow](https://wispr.ai/flow)
+**Cost**: $12/month or $96/year
+**Free Trial**: 7 days
+**Platform**: macOS
+
+**Features**:
+- All Wispr features
+- AI-powered text editing after dictation
+- Context-aware corrections
+- Format and style adjustments
+- Command execution (e.g., "make this more professional")
+
+**Pros**:
+- Enhanced AI editing capabilities
+- Fixes grammar and formatting automatically
+- Context-aware improvements
+- Premium Wispr experience
+
+**Cons**:
+- More expensive than basic Wispr
+- Still closed source
+- Requires internet connection
+
+---
+
+### Aqua Voice
+**Website**: [https://aquavoice.app](https://aquavoice.app)
+**Cost**: $8/month or $60/year
+**Free Trial**: 14 days (longer than Wispr!)
+**Platform**: macOS
+
+**Features**:
+- Global hotkey (Fn key or custom)
+- Works in all macOS apps
+- Multiple transcription services (Whisper, others)
+- Custom commands and shortcuts
+- On-device processing option
+
+**Pros**:
+- 14-day free trial (vs. 7 days for Wispr)
+- On-device option for privacy
+- Customizable commands
+- Similar price to Wispr
+
+**Cons**:
+- Less established than Wispr
+- UI not as polished
+
+---
+
+### Superwhisper
+**Website**: [https://superwhisper.com](https://superwhisper.com)
+**Cost**: One-time $30 (lifetime)
+**Free Trial**: Limited free version available
+**Platform**: macOS
+
+**Features**:
+- One-time purchase (no subscription!)
+- Works in all apps
+- Multiple recording modes
+- Customizable hotkeys
+- Privacy-focused
+
+**Pros**:
+- ONE-TIME PAYMENT (best value long-term)
+- No monthly subscription
+- Privacy-focused
+- Regular updates
+
+**Cons**:
+- Higher upfront cost
+- Free version is very limited
+- Smaller company/support
+
+---
+
+### Otter.ai
+**Website**: [https://otter.ai](https://otter.ai)
+**Cost**: Free tier, Pro $16.99/month, Business $30/user/month
+**Free Trial**: Free tier (600 minutes/month)
+**Platform**: Web, iOS, Android, Chrome extension
+
+**Features**:
+- Meeting transcription
+- Live transcription
+- Speaker identification
+- Searchable transcripts
+- Team collaboration
+- Integrations (Zoom, Google Meet, etc.)
+
+**Pros**:
+- Generous free tier (600 min/month)
+- Great for meetings
+- Cross-platform
+- Team features
+
+**Cons**:
+- More focused on meetings than general dictation
+- Web-based (not native app)
+- Not ideal for quick dictation
+
+---
+
+### Dragon Professional
+**Website**: [https://www.nuance.com/dragon](https://www.nuance.com/dragon)
+**Cost**: $500 one-time OR $15/month subscription
+**Free Trial**: 7 days
+**Platform**: Windows, macOS
+
+**Features**:
+- Industry leader (decades of development)
+- Medical/legal vocabulary
+- Voice commands for computer control
+- Custom vocabulary
+- Extremely high accuracy
+
+**Pros**:
+- Best-in-class accuracy
+- Professional features
+- Medical/legal specialized versions
+- Voice computer control
+
+**Cons**:
+- VERY expensive ($500 or $180/year)
+- Overkill for casual use
+- Steep learning curve
+- Resource-intensive
+
+---
+
+## Open-Source with Own API Keys
 
 #### WhisperWriter ⭐ Recommended
 **GitHub**: [https://github.com/savbell/whisper-writer](https://github.com/savbell/whisper-writer)
@@ -184,12 +325,24 @@ npm run pack
 
 ## Comparison Table
 
+### Paid/Commercial Options
+
+| Tool | Cost | Free Trial | Platform | Accuracy | Best For |
+|------|------|-----------|----------|----------|----------|
+| **Wispr** | $8/mo or $60/yr | 7 days | macOS | High | Polished, ready-to-use |
+| **Wispr Flow** | $12/mo or $96/yr | 7 days | macOS | High | AI editing, premium features |
+| **Aqua Voice** | $8/mo or $60/yr | 14 days | macOS | High | Longer trial, on-device option |
+| **Superwhisper** | $30 one-time | Limited free | macOS | High | One-time payment, best value |
+| **Otter.ai** | Free/$17/mo | 600 min/mo free | Cross-platform | High | Meetings, transcription |
+| **Dragon Pro** | $500 or $15/mo | 7 days | Win/Mac | Highest | Professional, medical/legal |
+
+### Open-Source & Free Options
+
 | Tool | Cost | Platform | Accuracy | Setup | Best For |
 |------|------|----------|----------|-------|----------|
-| **Wispr** | $X/month | macOS | High | Easy | Ready-to-use, polished |
-| **WhisperWriter** | ~$1.50/mo | Cross-platform | High | Medium | Cost-conscious, tech-savvy |
-| **OpenWhispr** | ~$1.50/mo | Cross-platform | High | Medium | Want nice GUI + own keys |
-| **Apple Dictation** | FREE | macOS | Medium | None | Quick notes, privacy |
+| **WhisperWriter** | ~$1.50/mo (API) | Cross-platform | High | Medium | Cost-conscious, own API keys |
+| **OpenWhispr** | ~$1.50/mo (API) | Cross-platform | High | Medium | GUI + own API keys |
+| **Apple Dictation** | FREE | macOS | Medium | None | Quick notes, privacy, trying it out |
 | **Talon Voice** | FREE (beta) | Cross-platform | High | Hard | Code by voice, power users |
 | **Voice In** | Free/Paid | Browser | Medium | Easy | Browser-only use |
 
@@ -205,10 +358,16 @@ npm run pack
 - [ ] Do I need offline capability?
 
 ### Cost Calculation:
-**If using 5 hours/week**:
-- Wispr: $X/month (fixed)
-- WhisperWriter (OpenAI API): ~$7.50/month (5h × 4 weeks × $0.006/min × 60min)
-- Apple Dictation: $0 (free)
+**If using 5 hours/week (20 hours/month)**:
+- **Wispr**: $8/month (fixed subscription)
+- **Wispr Flow**: $12/month (AI editing features)
+- **Aqua Voice**: $8/month (fixed subscription)
+- **Superwhisper**: $30 one-time (after 1 year = $2.50/month, 2 years = $1.25/month)
+- **Otter.ai**: Free tier (if under 600 min/month = 10 hours/month)
+- **WhisperWriter (OpenAI API)**: ~$7.20/month (20h × $0.006/min × 60min)
+- **Apple Dictation**: $0 (free)
+
+**Best Value Long-Term**: Superwhisper ($30 one-time, no subscription)
 
 ### Privacy Consideration:
 - **Most Private**: Apple Dictation (on-device) or local Whisper models
@@ -225,10 +384,26 @@ npm run pack
 - Worth the cost?
 
 ### Testing Plan:
-- [ ] Try Apple Dictation for 1 week (free baseline)
+
+**Week 1: Free Baseline**
+- [ ] Try Apple Dictation (free, built-in)
+- [ ] Note accuracy and frustrations
+- [ ] Track daily usage hours
+
+**Week 2-3: Test Paid Options (Free Trials)**
+- [ ] Aqua Voice (14-day free trial) - longest trial
+- [ ] Wispr (7-day free trial if needed) - current option
+- [ ] Wispr Flow (7-day free trial) - if you want AI editing
+- [ ] Note which feels best for workflow
+
+**Week 3: Test Open-Source**
 - [ ] Set up WhisperWriter with OpenAI API
-- [ ] Test accuracy and workflow
-- [ ] Compare costs after 1 month
+- [ ] Track actual API costs
+- [ ] Compare accuracy to paid options
+
+**Week 4: Decision**
+- [ ] Compare all experiences and costs
+- [ ] Consider Superwhisper ($30 one-time) if worth it
 - [ ] Make final decision
 
 ---
