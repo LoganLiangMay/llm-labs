@@ -33,8 +33,12 @@ This workflow bridges the gap between "I want to build X" and "Here's exactly ho
 ### Step 3: Generate PRD via AI Agent
 **Tool**: [[tools/cursor]] or [[tools/claude-code]]
 
+**Choose Your Template**:
+- **For Cursor**: Use [[templates/prd-prompt-template|PRD Prompt Template (Cursor)]] - concise, directive
+- **For Claude**: Use [[templates/prd-prompt-template-claude|PRD Prompt Template (Claude)]] - conversational, comprehensive
+
 **Process**:
-1. Use the [[templates/prd-prompt-template|PRD Prompt Template]]
+1. Choose the appropriate template for your AI agent
 2. Fill in project-specific details:
    - Project name
    - Full specification
@@ -76,15 +80,18 @@ This workflow bridges the gap between "I want to build X" and "Here's exactly ho
 ---
 
 ## Current Setup
-1. Using [[templates/prd-prompt-template|PRD Prompt Template]] for Cursor/AI agents
+1. Two PRD prompt templates available:
+   - [[templates/prd-prompt-template|Cursor-optimized]] - for Cursor IDE
+   - [[templates/prd-prompt-template-claude|Claude-optimized]] - for Claude Code / Claude.ai
 2. Firebase + React Native/Expo as default stack for rapid prototyping
 3. Hybrid AI approach (dedicated assistant + contextual features)
 
 ## Tools Used
 - [[tools/cursor]] - AI code editor for PRD generation and implementation
-- [[tools/claude-code]] - Alternative AI agent for planning
+- [[tools/claude-code]] - AI agent for planning and development
 - [[tools/firebase]] - Backend infrastructure
-- [[templates/prd-prompt-template]] - Reusable prompt template
+- [[templates/prd-prompt-template]] - Cursor-optimized PRD prompt template
+- [[templates/prd-prompt-template-claude]] - Claude-optimized PRD prompt template
 
 ## Examples
 - [[ai-drafts/chatiq-prd-example]] - WhatsApp clone with AI features for remote teams
@@ -99,8 +106,10 @@ This workflow bridges the gap between "I want to build X" and "Here's exactly ho
 - [x] Created reusable PRD prompt template with placeholders
 - [x] Structured prompt to focus on MVP vs. post-MVP features
 - [x] Added explicit risk/pitfall section for tech stack decisions
-- [ ] Test prompt with multiple project types
+- [x] Created separate Cursor-optimized and Claude-optimized templates
+- [ ] Test prompts with multiple project types
 - [ ] Refine based on agent output quality
+- [ ] Compare Cursor vs Claude PRD generation quality
 
 ## Next Steps
 1. Use template for ChatIQ messaging app project
@@ -109,9 +118,11 @@ This workflow bridges the gap between "I want to build X" and "Here's exactly ho
 4. Create library of project examples
 
 ## Related Resources
-- [[templates/prd-prompt-template]] - The core reusable template
+- [[templates/prd-prompt-template]] - Cursor-optimized template
+- [[templates/prd-prompt-template-claude]] - Claude-optimized template
 - [[ai-drafts/chatiq-prd-example]] - First example project
-- [[tools/cursor]] - Primary implementation tool
+- [[tools/cursor]] - Cursor implementation tool
+- [[tools/claude-code]] - Claude implementation tool
 - [[workflows/current]] - Current active workflow
 
 ## Notes
@@ -121,5 +132,5 @@ This workflow bridges the gap between "I want to build X" and "Here's exactly ho
 
 ---
 
-**Tags**: #workflow #project-planning #prd #ai-agents #cursor
+**Tags**: #workflow #project-planning #prd #ai-agents #cursor #claude
 **Status**: Active - In use for ChatIQ project

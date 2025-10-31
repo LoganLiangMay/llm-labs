@@ -15,5 +15,10 @@
 ## Note
 → [[templates/note-template]]
 
-## PRD Prompt (AI Agent)
-→ [[templates/prd-prompt-template]] - Reusable prompt for generating Product Requirements Documents via Cursor/Claude Code
+## PRD Prompts (AI Agents)
+
+### For Cursor
+→ [[templates/prd-prompt-template]] - Concise, directive prompt optimized for Cursor's code context
+
+### For Claude
+→ [[templates/prd-prompt-template-claude]] - Conversational, comprehensive prompt optimized for Claude Code and Claude.ai
